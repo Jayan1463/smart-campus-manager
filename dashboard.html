@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<title>Smart Campus Manager</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+🎓 <span>Campus</span>
+</div>
+
+<nav>
+
+<a href="dashboard.html" class="navItem active">
+<span>🏠</span> Dashboard
+</a>
+
+<a href="profile.html" class="navItem">
+<span>👤</span> Profile
+</a>
+
+<a onclick="logout()" class="navItem logout">
+<span>🚪</span> Logout
+</a>
+
+</nav>
+
+</div>
+
+<!-- MAIN CONTENT -->
+
+<div class="main">
+
+<!-- HEADER -->
+
+<div class="header">
+
+<div>
+
+<h1 id="welcome">Welcome</h1>
+<p class="subtitle">Manage campus events and registrations</p>
+
+</div>
+
+</div>
+
+<!-- ANALYTICS CARDS -->
+
+<div class="analytics">
+
+<div class="card stat">
+<h3>Total Events</h3>
+<p id="totalEvents">0</p>
+</div>
+
+<div class="card stat">
+<h3>Total Registrations</h3>
+<p id="totalRegistrations">0</p>
+</div>
+
+<div class="card stat">
+<h3>My Events</h3>
+<p id="myEvents">0</p>
+</div>
+
+<div class="card stat">
+<h3>Events Today</h3>
+<p id="todayEvents">0</p>
+</div>
+
+</div>
+
+<!-- ADMIN EVENT CREATOR -->
+
+<div id="adminPanel" class="card admin" style="display:none;">
+
+<h2>Create New Event</h2>
+
+<div class="formRow">
+
+<input id="eventName" placeholder="Event Name">
+
+<input id="eventDate" type="date">
+
+</div>
+
+<button onclick="addEvent()">Create Event</button>
+
+</div>
+
+<!-- UPCOMING EVENTS -->
+
+<div class="section">
+
+<div class="sectionHeader">
+<h2>Upcoming Events</h2>
+<p>Browse and register for campus activities</p>
+</div>
+
+<div id="eventList" class="eventGrid"></div>
+
+</div>
+
+<!-- USER REGISTRATIONS -->
+
+<div class="section">
+
+<div class="sectionHeader">
+<h2>My Registrations</h2>
+<p>Events you have joined</p>
+</div>
+
+<div id="registeredEvents" class="eventGrid"></div>
+
+</div>
+
+<!-- ANALYTICS CHART -->
+
+<div class="section">
+
+<div class="card chart">
+
+<h2>Event Participation Analytics</h2>
+
+<p class="chartSub">
+Number of students registered per event
+</p>
+
+<canvas id="eventChart"></canvas>
+
+</div>
+
+</div>
+
+<!-- FOOTER -->
+
+<div class="footer">
+
+<p>Smart Campus Manager • Built with Firebase</p>
+
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="dashboard.js"></script>
+
+</body>
+
+</html>

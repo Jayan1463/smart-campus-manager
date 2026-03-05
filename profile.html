@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>User Profile | Smart Campus Manager</title>
+
+<link rel="stylesheet" href="style.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<body>
+
+<div class="dashboard">
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+<div class="logo">
+🎓 <span>Campus</span>
+</div>
+
+<nav>
+
+<a href="dashboard.html" class="navItem">
+<span>🏠</span> Dashboard
+</a>
+
+<a href="profile.html" class="navItem active">
+<span>👤</span> Profile
+</a>
+
+<a onclick="logout()" class="navItem logout">
+<span>🚪</span> Logout
+</a>
+
+</nav>
+
+</div>
+
+
+<!-- MAIN CONTENT -->
+
+<div class="main">
+
+<div class="header">
+<h1>User Profile</h1>
+<p class="subtitle">View your account details and registered events</p>
+</div>
+
+
+<!-- PROFILE CARD -->
+
+<div class="card profileCard">
+
+<h2 id="userEmail"></h2>
+<p id="userRole">Student</p>
+
+</div>
+
+
+<!-- STATS -->
+
+<div class="analytics">
+
+<div class="card stat">
+<h3>Total Events Registered</h3>
+<p id="totalEvents">0</p>
+</div>
+
+<div class="card stat">
+<h3>Upcoming Events</h3>
+<p id="upcomingEvents">0</p>
+</div>
+
+<div class="card stat">
+<h3>Account Created</h3>
+<p id="createdDate"></p>
+</div>
+
+</div>
+
+
+<!-- REGISTERED EVENTS -->
+
+<div class="section">
+
+<div class="sectionHeader">
+<h2>My Registered Events</h2>
+<p>Events you have successfully joined</p>
+</div>
+
+<div id="myEventsList" class="eventGrid"></div>
+
+</div>
+
+
+<!-- ACCOUNT DETAILS -->
+
+<div class="card">
+
+<h2>Account Details</h2>
+
+<p><strong>Email:</strong> <span id="emailDetail"></span></p>
+<p><strong>Role:</strong> <span id="roleDetail"></span></p>
+<p><strong>Status:</strong> Active</p>
+
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footer">
+<p>Smart Campus Manager • Built with Firebase</p>
+</div>
+
+</div>
+
+</div>
+
+<script type="module" src="profile.js"></script>
+
+</body>
+
+</html>
